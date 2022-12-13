@@ -1,23 +1,22 @@
-/*
-//¿¹Á¦ 1¹ø
-//*´Â Æ÷ÀÎÅÍ º¯¼ö ³»¿¡ ÀúÀåµÈ ÁÖ¼Ò°ª¿¡ ÇØ´çÇÏ´Â º¯¼öÀÇ °ªÀ» °¡Á®¿È
+//ì˜ˆì œ 1ë²ˆ
+//*ëŠ” í¬ì¸í„° ë³€ìˆ˜ ë‚´ì— ì €ì¥ëœ ì£¼ì†Œê°’ì— í•´ë‹¹í•˜ëŠ” ë³€ìˆ˜ì˜ ê°’ì„ ê°€ì ¸ì˜´
 #include <stdio.h>
 int main(void){
 	int number = 10;
-	int* p; // Æ÷ÀÎÅÍ º¯¼ö P ¼±¾ğ
+	int* p; // í¬ì¸í„° ë³€ìˆ˜ P ì„ ì–¸
 
-	p = &number; // numberÀÇ ÁÖ¼Ò¸¦ Æ÷ÀÎÅÍ º¯¼ö p¿¡ ÀúÀå
+	p = &number; // numberì˜ ì£¼ì†Œë¥¼ í¬ì¸í„° ë³€ìˆ˜ pì— ì €ì¥
 
-	printf("º¯¼öÀÇ numberÀÇ ÁÖ¼Ò = %p\n", &number);
-	printf("Æ÷ÀÎÅÍ º¯¼ö¿¡ ÀúÀåµÈ °ª = %p\n", p); // Æ÷ÀÎÅÍ º¯¼ö¿¡ ÀúÀåµÈ °ªÀÌ numberÀÇ ÁÖ¼Ò°ªÀÌ±â¿¡ %p »ç¿ë
-	printf("º¯¼ö number¿¡ ÀúÀåµÈ °ª = %d\n", number);
-	printf("Æ÷ÀÎÅÍ°¡ °¡¸®Å°´Â °ª = %d", *p);
+	printf("ë³€ìˆ˜ì˜ numberì˜ ì£¼ì†Œ = %p\n", &number);
+	printf("í¬ì¸í„° ë³€ìˆ˜ì— ì €ì¥ëœ ê°’ = %p\n", p); // í¬ì¸í„° ë³€ìˆ˜ì— ì €ì¥ëœ ê°’ì´ numberì˜ ì£¼ì†Œê°’ì´ê¸°ì— %p ì‚¬ìš©
+	printf("ë³€ìˆ˜ numberì— ì €ì¥ëœ ê°’ = %d\n", number);
+	printf("í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ = %d", *p); //*pìì²´ëŠ” í¬ì¸í„° ë³€ìˆ˜ì— í• ë‹¹ëœ ì£¼ì†Œë¥¼ ì§€ë‹Œ ë³€ìˆ˜ì˜ ì‹¤ì œ ê°’
 
 	return 0;
 }
 
 
-//¿¹Á¦ 2¹ø
+//ì˜ˆì œ 2ë²ˆ
 
 #include <stdio.h>
 
@@ -25,19 +24,19 @@ int main(void) {
 	int number = 10;
 	int* p;
 	
-	p = &number;
-	printf("º¯¼ö numberÀÇ °ª=%d\n", number);
+	p = &number; // numberì˜ ì£¼ì†Œë¥¼ í¬ì¸í„° ë³€ìˆ˜ pì— ì €ì¥
+	printf("ë³€ìˆ˜ numberì˜ ê°’=%d\n", number);
 
-	*p = 20; //Æ÷ÀÎÅÍ º¯¼ö ³»¿¡ ÀúÀåµÈ ÁÖ¼Ò°ª¿¡ ÇØ´çÇÏ´Â º¯¼öÀÇ °ªÀ» 20À¸·Î º¯°æ
-	printf("º¯¼ö numberÀÇ °ª = %d\n", number);
+	*p = 20; //í¬ì¸í„° ë³€ìˆ˜ ë‚´ì— ì €ì¥ëœ ì£¼ì†Œê°’ì— í•´ë‹¹í•˜ëŠ” ë³€ìˆ˜ì˜ ê°’ì„ 20ìœ¼ë¡œ ë³€ê²½
+	printf("ë³€ìˆ˜ numberì˜ ê°’ = %d\n", number);
 
 	return 0;
 }
 
 
-//Áõ°¡¿¬»ê¿¹Á¦ÀÇ °æ¿ì Àı´ëÁÖ¼Ò ´ëÀÔÇÏ¸é ÄÄÇ»ÅÍÀÇ °­Á¦Á¾·áÀÇ °æ¿ì°¡ ÀÖ¾î ½Ç½ÀX
+//ì¦ê°€ì—°ì‚°ì˜ˆì œì˜ ê²½ìš° ì ˆëŒ€ì£¼ì†Œ ëŒ€ì…í•˜ë©´ ì»´í“¨í„°ì˜ ê°•ì œì¢…ë£Œì˜ ê²½ìš°ê°€ ìˆì–´ ì‹¤ìŠµX
 
-//°£Á¢ ÂüÁ¶ ¿¬»êÀÚ¿Í Áõ°¨¿¬»êÀÚ
+//ê°„ì ‘ ì°¸ì¡° ì—°ì‚°ìì™€ ì¦ê°ì—°ì‚°ì
 
 #include<stdio.h>
 
@@ -49,13 +48,13 @@ int main(void) {
 	p = &number;
 
 	printf("number = %u\n", number);
-	printf("º¯¼ö numberÀÇ ÁÖ¼Ò = %u\n", &number);
+	printf("ë³€ìˆ˜ numberì˜ ì£¼ì†Œ = %u\n", &number);
 	printf("p = %u\n", p);
 	
-	// v = *p++ // *p(number)°ªÀ» v¿¡³Ö°í, p(ÁÖ¼Ò)´Â Áõ°¡(int¶ó¼­ 4Áõ°¡)
-	// v = (*p)++ // *p(number)°ªÀ» v¿¡³Ö°í, *p(number)¸¦ 1 Áõ°¡
-	// v = *++p //p(ÁÖ¼Ò)¸¦ Áõ°¡½ÃÅ°°í, Áõ°¡µÈ p¿¡ °¡¸£Å°´Â °ª v¿¡ ´ëÀÔ
-	v = ++(*p);// *p(number)¸¦ °¡Á®¿Í¼­, ±× °ªÀ» Áõ°¡½ÃÅ°°í v¿¡ ´ëÀÔ
+	// v = *p++ // *p(number)ê°’ì„ vì—ë„£ê³ , p(ì£¼ì†Œ)ëŠ” ì¦ê°€(intë¼ì„œ 4ì¦ê°€)
+	// v = (*p)++ // *p(number)ê°’ì„ vì—ë„£ê³ , *p(number)ë¥¼ 1 ì¦ê°€
+	// v = *++p //p(ì£¼ì†Œ)ë¥¼ ì¦ê°€ì‹œí‚¤ê³ , ì¦ê°€ëœ pì— ê°€ë¥´í‚¤ëŠ” ê°’ vì— ëŒ€ì…
+	v = ++(*p);// *p(number)ë¥¼ ê°€ì ¸ì™€ì„œ, ê·¸ ê°’ì„ ì¦ê°€ì‹œí‚¤ê³  vì— ëŒ€ì…
 
 	printf("v = %u\n", v);
 	printf("p = %u\n", p);
@@ -66,7 +65,7 @@ int main(void) {
 }
 
 
-// °ª¿¡ ÀÇÇÑ È£Ãâ call by value
+// ê°’ì— ì˜í•œ í˜¸ì¶œ call by value
 
 #include <stdio.h>
 
@@ -84,7 +83,7 @@ int main(void) {
 }
 
 
-// ÂüÁ¶¿¡ ÀÇÇÑ È£Ãâ  call by reference
+// ì°¸ì¡°ì— ì˜í•œ í˜¸ì¶œ  call by reference
 
 #include <stdio.h>
 
@@ -95,14 +94,14 @@ void modify(int *ptr) {
 int main(void) {
 	int number = 1;
 
-	modify(&number);
-	printf("number = %d\n", number);
+	modify(&number); //í•¨ìˆ˜ ë§¤ê°œë³€ìˆ˜ë¡œ numberí•¨ìˆ˜ì˜ ì£¼ì†Œ ì‚¬ìš©(ptr = &number)
+	printf("number = %d\n", number); //number = 99;
 
 	return 0;
 }
 
 
-//swap()ÇÔ¼ö #2 call by reference
+//swap()í•¨ìˆ˜ #2 call by reference
 
 #include<stdio.h>
 
@@ -116,17 +115,17 @@ void swap(int* px, int* py) {
 
 int main(void) {
 	int a = 100, b = 200;
-	printf("swap() È£Ãâ Àü a = %d, b = %d\n",a, b);
+	printf("swap() í˜¸ì¶œ ì „ a = %d, b = %d\n",a, b);
 
 	swap(&a, &b);
 
-	printf("swap() È£Ãâ ÈÄ a = %d, b = %d\n",a, b);
+	printf("swap() í˜¸ì¶œ í›„ a = %d, b = %d\n",a, b); // a = 200 b = 100
 
 	return 0;
 }
 
 
-//swap() ÇÔ¼ö call by value
+//swap() í•¨ìˆ˜ call by value
 
 #include<stdio.h>
 
@@ -140,11 +139,11 @@ void swap(int x, int y) {
 
 int main(void) {
 	int a = 100, b = 200;
-	printf("swap() È£Ãâ Àü a = %d, b = %d\n", a, b);
+	printf("swap() í˜¸ì¶œ ì „ a = %d, b = %d\n", a, b);
 
 	swap(a, b);
 
-	printf("swap() È£Ãâ ÈÄ a = %d, b = %d\n", a, b);
+	printf("swap() í˜¸ì¶œ í›„ a = %d, b = %d\n", a, b);
 
 	return 0;
 }
@@ -159,24 +158,25 @@ void sub(int* ptr) {
 
 int main(void) {
 	int large_data[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 };
-	sub(large_data);
+	sub(large_data); // 11
 	return 0;
 }
 
-//Æ÷ÀÎÅÍ¿Í ¹è¿­
+
+//í¬ì¸í„°ì™€ ë°°ì—´
 #include <stdio.h>
 
 int main(void) {
 	int a[] = { 10,20,30,40,50 };
 
-	printf("¹è¿­ÀÇ ÀÌ¸§ = %u\n", a);
-	printf("Ã¹ ¹øÂ° ¿ø¼ÒÀÇ ÁÖ¼Ò = %u\n", &a[0]);
+	printf("ë°°ì—´ì˜ ì´ë¦„ = %u\n", a); 
+	printf("ì²« ë²ˆì§¸ ì›ì†Œì˜ ì£¼ì†Œ = %u\n", &a[0]); //ë°°ì—´ ì´ë¦„ê³¼ ì²«ë²ˆì§¸ ì›ì†Œì˜ ì£¼ì†Œê°€ ë™ì¼
 
 	return 0;
 }
-*/
 
-//Æ÷ÀÎÅÍ¿Í ¹è¿­2
+
+//í¬ì¸í„°ì™€ ë°°ì—´2
 #include <stdio.h>
 
 int main(void) {
