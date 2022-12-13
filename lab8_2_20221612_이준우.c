@@ -1,6 +1,4 @@
-/*
-
-//lab ¿Âµµº¯È¯ ÇÔ¼ö
+//lab ì˜¨ë„ë³€í™˜ í•¨ìˆ˜
 
 #include <stdio.h>
 double FtoC(double temp_f);
@@ -8,22 +6,22 @@ double FtoC(double temp_f);
 int main(void) {
 	double c,f;
 	f = 32.0;
-	c = FtoC(f); //temp_c¹İÈ¯
+	c = FtoC(f); //FtoCí•¨ìˆ˜ í˜¸ì¶œí•´ì„œ ë°˜í™˜ê°’(temp_c) ë³€ìˆ˜ cì— ì €ì¥
 
-	printf("È­¾¾¿Âµµ %lfÀº ¼·¾¾¿Âµµ %lf¿¡ ÇØ´çÇÑ´Ù.\n", f, c);
+	printf("í™”ì”¨ì˜¨ë„ %lfì€ ì„­ì”¨ì˜¨ë„ %lfì— í•´ë‹¹í•œë‹¤.\n", f, c);
 
 	return 0;
 }
 
-double FtoC(double temp_f) {
+double FtoC(double temp_f) { //í™”ì”¨ to ì„­ì”¨
 	double temp_c;
 	temp_c = (5.0 * (temp_f - 32.0)) / 9.0;
 
-	return temp_c;
+	return temp_c; //temp_cì— ì €ì¥ëœ ë³€ìˆ˜ë¥¼ ë°˜í™˜
 }
 
 
-//lab ¼Ò¼ö°Ë»ç ÇÔ¼ö
+//lab ì†Œìˆ˜ê²€ì‚¬ í•¨ìˆ˜
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -32,38 +30,38 @@ int check_prime(int n);
 
 int main(void) {
 	int k;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf_s("%d", &k);
 
-	if (check_prime(k) == 1) {
-		printf("¼Ò¼öÀÔ´Ï´Ù.\n");
+	if (check_prime(k) == 1) { //check_primeí•¨ìˆ˜ í˜¸ì¶œ, ë§¤ê°œë³€ìˆ˜ì— ë³€ìˆ˜k ëŒ€ì…
+		printf("ì†Œìˆ˜ì…ë‹ˆë‹¤.\n");
 	}
 	else {
-		printf("¼Ò¼ö°¡ ¾Æ´Õ´Ï´Ù.\n");
+		printf("ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.\n");
 	}
 	return 0;
 }
 
 int check_prime(int n) {
 	int is_prime = 1;
-	for (int i = 2; i < n; ++i) {
-		if (n % i == 0) {
-			is_prime = 0;
-			break;
+	for (int i = 2; i < n; ++i) { //2ë¶€í„° nê¹Œì§€ ë°˜ë³µ
+		if (n % i == 0) { //nì´ ië¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ë©´
+			is_prime = 0; // is_primeì— 0 ëŒ€ì…
+			break; //for ë°˜ë³µë¬¸ íƒˆì¶œ
 		}
 	}
-	return is_prime;
+	return is_prime; //is_prime ë³€ìˆ˜ì— ì €ì¥ëœ ê°’ ë°˜í™˜
 }
 
 
-//lab ¼Ò¼öÀÇ ÇÕ Ã£±â
+//lab ì†Œìˆ˜ì˜ í•© ì°¾ê¸°
 
 #include <stdio.h>
 int check_prime(int n);
 
 int main(void) {
 	int n, flag = 0;
-	printf("¾çÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì–‘ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf_s("%d", &n);
 
 	for (int i = 2; i < n; i++) {
@@ -75,7 +73,7 @@ int main(void) {
 		}
 	}
 	if (flag == 0) {
-		printf("%dÀº ¼Ò¼öµéÀÇ ÇÕÀ¸·Î Ç¥½ÃµÉ ¼ö ¾ø½À´Ï´Ù.\n", n);
+		printf("%dì€ ì†Œìˆ˜ë“¤ì˜ í•©ìœ¼ë¡œ í‘œì‹œë  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n", n);
 	}
 	return 0;
 }
@@ -89,10 +87,10 @@ int check_prime(int n) {
 		}
 	}
 	return is_prime;
-}\
+}
 
 
-//lab ÇÇº¸³ªÄ¡ ¼ö¿­
+//lab í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´
 #include <stdio.h>
 
 int fibbonacci(int n) {
@@ -114,9 +112,9 @@ int main(void) {
 }
 
 
-//lab ·Î¶Ç ¹øÈ£ »ı¼º
+//lab ë¡œë˜ ë²ˆí˜¸ ìƒì„±
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //srand()í•¨ìˆ˜ ì‚¬ìš©ì„ ìœ„í•´ í—¤ë”íŒŒì¼ ì‚½ì…
 #include <time.h>
 
 #define MAX 45
@@ -139,7 +137,7 @@ int main(void) {
 }
 
 
-//lab Å×ÀÏ·¯ ±Ş¼ö
+//lab í…Œì¼ëŸ¬ ê¸‰ìˆ˜
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
@@ -168,7 +166,7 @@ int main(void) {
 	double sum = 0.0;
 	int x, n;
 
-	printf("x¿Í nÀÇ °ªÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("xì™€ nì˜ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf_s("%d %d", &x, &n);
 
 	for (int i = 0; i <= n; i++) {
@@ -179,7 +177,7 @@ int main(void) {
 	return 0;
 }
 
-*/
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
@@ -187,26 +185,26 @@ int bal = 10000;
 
 void showMenu()
 {
-	printf("*********** Welcome to ÄÜ¼­Æ® ATM ***********\n");
-	printf("**** ÇÏ³ª¸¦ ¼±ÅÃÇÏ¼¼¿ä ****\n");
-	printf("<1> ÀÜ°í È®ÀÎ\n<2> ÀÔ±İ\n<3> Ãâ±İ\n<4> Á¾·á\n");
+	printf("*********** Welcome to ì½˜ì„œíŠ¸ ATM ***********\n");
+	printf("**** í•˜ë‚˜ë¥¼ ì„ íƒí•˜ì„¸ìš” ****\n");
+	printf("<1> ì”ê³  í™•ì¸\n<2> ì…ê¸ˆ\n<3> ì¶œê¸ˆ\n<4> ì¢…ë£Œ\n");
 }
 
 void show() {
-	printf("\nÀÜ°í´Â %dÀÔ´Ï´Ù.\n", bal);
+	printf("\nì”ê³ ëŠ” %dì…ë‹ˆë‹¤.\n", bal);
 	printf("\n");
 }
 
 void showRes()
 {
-	printf("\n»õ·Î¿î ÀÜ°í´Â %dÀÔ´Ï´Ù.\n", bal);
+	printf("\nìƒˆë¡œìš´ ì”ê³ ëŠ” %dì…ë‹ˆë‹¤.\n", bal);
 	printf("\n");
 }
 
 void input()
 {
 	int money;
-	printf("****ÀÔ±İ ±İ¾×À» ÀÔ·ÂÇÏ½Ã¿À\n");
+	printf("****ì…ê¸ˆ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹œì˜¤\n");
 	scanf_s("%d", &money);
 	bal += money;
 	showRes();
@@ -215,7 +213,7 @@ void input()
 void output()
 {
 	int money;
-	printf("****Ãâ±İ ±İ¾×À» ÀÔ·ÂÇÏ½Ã¿À\n");
+	printf("****ì¶œê¸ˆ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì‹œì˜¤\n");
 	scanf_s("%d", &money);
 	bal = money;
 	showRes();
@@ -223,7 +221,7 @@ void output()
 
 void out()
 {
-	printf("ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.\n");
+	printf("ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.\n");
 }
 
 int main()
